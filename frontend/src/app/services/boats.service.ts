@@ -10,11 +10,14 @@ export class Boats{
   brand: string;
   model: string;
   status: string;
-  filename: string;
   userId: number;
   managerId: number;
+  file = File;
 }
 
+const hhtpOptionsUsingFormData ={
+  headers: new HttpHeaders({ 'enctype': 'multipart/form-data; boundary=----WebKitFormBoundaryuL67FWkv1CA'})
+}
 
 @Injectable({
   providedIn: 'root'
@@ -23,17 +26,15 @@ export class BoatsService {
 
   endpoint = "http://localhost:4000/api/boat";
 
-  httpOptions = {headers: new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'})};
-  constructor(private httpClient: HttpClient, private  storage:  Storage) { }
+  constructor(private httpClient: HttpClient) { }
 
-  createBoat(Boats: Boats): Observable<any>{
-    let bodyencoded = new URLSearchParams();
+  createBoat(Boats: Boats, file: File): Observable<any>{
+    let bodyencoded = new FormData();
     bodyencoded.append("brand",Boats.brand);
     bodyencoded.append("model", Boats.model);
     bodyencoded.append("status",Boats.status);
-    bodyencoded.append("filename", Boats.filename);
-    const body = bodyencoded.toString();
-    return this.httpClient.post<Boats>(this.endpoint, body, this.httpOptions)
+    bodyencoded.append("file",file);
+    return this.httpClient.post<Boats>(this.endpoint, bodyencoded, hhtpOptionsUsingFormData)
       .pipe(
         catchError(this.handleError<Boats>('Error occured'))
       );
@@ -54,14 +55,13 @@ export class BoatsService {
     );
   }
 
-  updateBoats(id, Boats: Boats): Observable<any> {
-    let bodyencoded = new URLSearchParams();
+  updateBoats(id, Boats: Boats, file:File): Observable<any> {
+    let bodyencoded = new FormData();
     bodyencoded.append("brand",Boats.brand);
     bodyencoded.append("model", Boats.model);
     bodyencoded.append("status",Boats.status);
-    bodyencoded.append("filename", Boats.filename);
-    const body = bodyencoded.toString();
-    return this.httpClient.put(this.endpoint + '/' + id, body, this.httpOptions)
+    bodyencoded.append("file", file);
+    return this.httpClient.put(this.endpoint + '/' + id, bodyencoded, hhtpOptionsUsingFormData)
     .pipe(
       tap(_ => console.log('boats updated: ${id}')),
       catchError(this.handleError<Boats[]>('Update boats'))
@@ -69,7 +69,7 @@ export class BoatsService {
   }
 
   deleteBoats(id): Observable<Boats[]>{
-    return this.httpClient.delete<Boats[]>(this.endpoint + '/' + id, this.httpOptions)
+    return this.httpClient.delete<Boats[]>(this.endpoint + '/' + id)
     .pipe(
       tap(_ => console.log('boat deleted: ${id}')),
       catchError(this.handleError<Boats[]>('Delete boat'))

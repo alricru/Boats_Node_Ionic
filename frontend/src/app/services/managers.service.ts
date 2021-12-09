@@ -54,20 +54,19 @@ export class ManagersService {
     );
   }
 
-  /* updateManagers(id, Managers: Managers): Observable<any> {
-    let bodyencoded = new URLSearchParams();
+   updateManagers(id, Managers: Managers, file:File): Observable<any> {
+    let bodyencoded = new FormData();
     bodyencoded.append("name",Managers.name);
     bodyencoded.append("surname", Managers.surname);
     bodyencoded.append("repairedboats",Managers.repairedboats);
     bodyencoded.append("description",Managers.description);
-    bodyencoded.append("filename", Managers.filename.toString());
-    const body = bodyencoded.toString();
-    return this.httpClient.put(this.endpoint + '/' + id, body, this.httpOptions)
+    bodyencoded.append("file", file);
+    return this.httpClient.put(this.endpoint + '/' + id, bodyencoded, hhtpOptionsUsingFormData)
     .pipe(
       tap(_ => console.log('managers updated: ${id}')),
       catchError(this.handleError<Managers[]>('Update managers'))
     );
-  } */
+  } 
 
   deleteManagers(id): Observable<Managers[]>{
     return this.httpClient.delete<Managers[]>(this.endpoint + '/' + id)

@@ -40,6 +40,14 @@ const routes: Routes = [
         path: 'list-boats',
         loadChildren: () => import('../lists/list-boats/list-boats.module').then( m => m.ListBoatsPageModule)
       },
+      {
+        path: 'update-managers',
+        loadChildren: () => import('../update/update-managers/update-managers.module').then( m => m.UpdateManagersPageModule)
+      },
+      {
+        path: 'update-boats',
+        loadChildren: () => import('../update/update-boats/update-boats.module').then( m => m.UpdateBoatsPageModule)
+      },
     ]
   },
   {

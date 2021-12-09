@@ -34,6 +34,7 @@ export class MenuPage implements OnInit{
         {title: 'Admin', url: '/menu/login'},
         {title: 'Managers', url: '/menu/list-managers'},
         {title: 'Boats', url: '/menu/list-boats'},
+        {title: 'Update', url: '/menu/update-managers'},
       ];
     }else{
       this.pages = [
