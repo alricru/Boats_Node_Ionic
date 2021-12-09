@@ -43,7 +43,7 @@ export class UpdateManagersPage implements OnInit {
         surname: data['surname'],
         repairedboats: data['repairedboats'],
         description: data['description'],
-        file: data['file']
+        file: data['filename']
       });
     })
   }
@@ -57,7 +57,7 @@ onSubmit(){
     return false;
   }else{
     const manager:Managers = this.managerForm.value;
-    this.ManagersService.updateManagers(manager.id,manager,this.file).subscribe(()=>{
+    this.ManagersService.updateManagers(this.id,manager,this.file).subscribe(()=>{
       this.managerForm.reset;
       this.router.navigateByUrl("menu/list-managers");
     });
