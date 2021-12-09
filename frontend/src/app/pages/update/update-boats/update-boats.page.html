@@ -34,9 +34,10 @@
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating">ID Manager</ion-label>
-        <ion-input formControlName="managerId" type="text" required>
-        </ion-input>
+        <ion-label position="floating">Manager</ion-label>
+        <ion-select formControlName="managerId" type="text" required>
+          <ion-select-option *ngFor="let manager of Managers" value='{{manager.id}}'>{{manager.name}}</ion-select-option>
+        </ion-select>
       </ion-item>
 
       <ion-item>

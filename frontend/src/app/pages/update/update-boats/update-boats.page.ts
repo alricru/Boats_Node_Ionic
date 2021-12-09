@@ -2,6 +2,7 @@ import { Component, NgZone, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Boats, BoatsService } from 'src/app/services/boats.service';
+import { ManagersService } from 'src/app/services/managers.service';
 
 @Component({
   selector: 'app-update-boats',
@@ -16,6 +17,8 @@ export class UpdateBoatsPage implements OnInit {
 
   submitted = false;
 
+  Managers: any = []
+
   private file : File;
 
   constructor(
@@ -23,7 +26,8 @@ export class UpdateBoatsPage implements OnInit {
     public formBuilder: FormBuilder,
     private zone: NgZone,
     private activatedRoute: ActivatedRoute,
-    private BoatsService: BoatsService
+    private BoatsService: BoatsService,
+    private ManagersService: ManagersService
   ){this.id = this.activatedRoute.snapshot.paramMap.get('id');}
 
   ngOnInit() {
@@ -35,6 +39,11 @@ export class UpdateBoatsPage implements OnInit {
       userId: [''],
       managerId: [''],
       file: [null]
+    })
+  }
+  ionViewDidEnter(){
+    this.ManagersService.getManagers().subscribe((response) =>{
+      this.Managers = response;
     })
   }
   fetchUser(id){
