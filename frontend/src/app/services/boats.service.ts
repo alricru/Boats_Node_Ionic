@@ -33,6 +33,8 @@ export class BoatsService {
     bodyencoded.append("brand",Boats.brand);
     bodyencoded.append("model", Boats.model);
     bodyencoded.append("status",Boats.status);
+    bodyencoded.append("userId",Boats.userId.toString());
+    bodyencoded.append("managerId",Boats.managerId.toString());
     bodyencoded.append("file",file);
     return this.httpClient.post<Boats>(this.endpoint, bodyencoded, hhtpOptionsUsingFormData)
       .pipe(
@@ -60,6 +62,8 @@ export class BoatsService {
     bodyencoded.append("brand",Boats.brand);
     bodyencoded.append("model", Boats.model);
     bodyencoded.append("status",Boats.status);
+    bodyencoded.append("userId",Boats.userId.toString());
+    bodyencoded.append("managerId",Boats.managerId.toString());
     bodyencoded.append("file", file);
     return this.httpClient.put(this.endpoint + '/' + id, bodyencoded, hhtpOptionsUsingFormData)
     .pipe(

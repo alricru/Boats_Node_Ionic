@@ -1,16 +1,15 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from "@angular/forms";
-import { Managers, ManagersService } from 'src/app/services/managers.service';
+import {Boats, BoatsService } from 'src/app/services/boats.service';
 
 @Component({
-  selector: 'app-create-managers',
-  templateUrl: './create-managers.page.html',
-  styleUrls: ['./create-managers.page.scss'],
+  selector: 'app-create-boats',
+  templateUrl: './create-boats.page.html',
+  styleUrls: ['./create-boats.page.scss'],
 })
-export class CreateManagersPage implements OnInit {
-
-  managerForm: FormGroup;
+export class CreateBoatsPage implements OnInit {
+  boatForm: FormGroup;
 
   submitted = false;
 
@@ -20,15 +19,16 @@ export class CreateManagersPage implements OnInit {
     private router: Router,
     public formBuilder: FormBuilder,
     private zone: NgZone,
-    private ManagersService: ManagersService
+    private BoatsService: BoatsService
   ){}
 
   ngOnInit() {
-    this.managerForm = this.formBuilder.group({
-      name: [''],
-      surname: [''],
-      repairedboats: [''],
-      description: [''],
+    this.boatForm = this.formBuilder.group({
+      brand: [''],
+      model: [''],
+      status: [''],
+      userId: [''],
+      managerId: [''],
       file: [null]
     })
   }
@@ -38,21 +38,20 @@ export class CreateManagersPage implements OnInit {
 
   onSubmit(){
     this.submitted = true;
-    if (!this.managerForm.valid){
+    if (!this.boatForm.valid){
       console.log('Rellene los campos obligatorios')
       return false;
     }else{
-      const manager:Managers = this.managerForm.value;
-      this.ManagersService.createManager(manager,this.file).subscribe(()=>{
-        this.managerForm.reset;
+      const boat:Boats = this.boatForm.value;
+      this.BoatsService.createBoat(boat,this.file).subscribe(()=>{
+        this.boatForm.reset;
         this.router.navigateByUrl("menu/list-boats");
       });
     }
-    console.log(this.managerForm.value)
+    console.log(this.boatForm.value)
   }
   cancel(){
-    this.managerForm.reset;
+    this.boatForm.reset;
     this.router.navigateByUrl("menu/list-boats").then(()=>{window.location.reload();});
   }
-
 }

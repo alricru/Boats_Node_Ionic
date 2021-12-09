@@ -1,7 +1,7 @@
 <app-header></app-header>
   <div slot="fixed" id="container">
     <ion-title>Boats</ion-title>
-    <ion-button class="add" routerLinkActive="tab-selected" routerLink="/menu/create-managers" tab="create">
+    <ion-button class="add" routerLinkActive="tab-selected" routerLink="/menu/create-boats" tab="create">
       <ion-icon name="add-circle-outline" style="zoom:1.5"></ion-icon>
     </ion-button>
     <ion-searchbar showCancelButton="focus" (ionChange)="setSearchInput($event)"></ion-searchbar>
@@ -16,7 +16,7 @@
       <ion-card-title>Marca: {{boat.brand}}</ion-card-title>
       <ion-card-subtitle>Modelo: {{boat.model}}</ion-card-subtitle>
       <div class="container">
-        <ion-button class="create">
+        <ion-button class="create" [routerLink]="['/menu/update-boats/', boat]">
           <ion-icon name="create-outline" style="zoom:1.5"></ion-icon>
         </ion-button>
         <ion-button class="delete" (click)="removeBoat(boat)">

@@ -4,18 +4,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { UpdateBoatsPageRoutingModule } from './update-boats-routing.module';
+import { CreateBoatsPageRoutingModule } from './create-boats-routing.module';
 
-import { UpdateBoatsPage } from './update-boats.page';
+import { CreateBoatsPage } from './create-boats.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    UpdateBoatsPageRoutingModule,
+    CreateBoatsPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [UpdateBoatsPage]
+  declarations: [CreateBoatsPage]
 })
-export class UpdateBoatsPageModule {}
+export class CreateBoatsPageModule {}

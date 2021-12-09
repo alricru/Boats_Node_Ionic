@@ -48,6 +48,15 @@ const routes: Routes = [
         path: 'update-boats',
         loadChildren: () => import('../update/update-boats/update-boats.module').then( m => m.UpdateBoatsPageModule)
       },
+      {
+        path: 'create-boats',
+        loadChildren: () => import('../create/create-boats/create-boats.module').then( m => m.CreateBoatsPageModule)
+      },
+      {
+        path: 'update-boats',
+        loadChildren: () => import('../update/update-boats/update-boats.module').then( m => m.UpdateBoatsPageModule)
+      },
+    
     ]
   },
   {
