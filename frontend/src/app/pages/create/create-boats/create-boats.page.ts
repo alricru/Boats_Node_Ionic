@@ -2,6 +2,7 @@ import { Component, NgZone, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from "@angular/forms";
 import {Boats, BoatsService } from 'src/app/services/boats.service';
+import { ManagersService } from 'src/app/services/managers.service';
 
 @Component({
   selector: 'app-create-boats',
@@ -15,11 +16,14 @@ export class CreateBoatsPage implements OnInit {
 
   private file : File;
 
+  Managers: any = []
+
   constructor(
     private router: Router,
     public formBuilder: FormBuilder,
     private zone: NgZone,
-    private BoatsService: BoatsService
+    private BoatsService: BoatsService,
+    private ManagersService: ManagersService
   ){}
 
   ngOnInit() {
@@ -30,6 +34,11 @@ export class CreateBoatsPage implements OnInit {
       userId: [''],
       managerId: [''],
       file: [null]
+    })
+  }
+  ionViewDidEnter(){
+    this.ManagersService.getManagers().subscribe((response) =>{
+      this.Managers = response;
     })
   }
   fileChange(fileChangeEvent){

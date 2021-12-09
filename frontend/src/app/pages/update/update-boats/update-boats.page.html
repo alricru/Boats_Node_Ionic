@@ -20,8 +20,11 @@
 
       <ion-item>
         <ion-label position="floating">Estado</ion-label>
-        <ion-input formControlName="status" type="text" required>
-        </ion-input>
+        <ion-select formControlName="status" type="text" required>
+          <ion-select-option value="Checking">Checking</ion-select-option>
+          <ion-select-option value="Repairing">Repairing</ion-select-option>
+          <ion-select-option value="Repaired">Repaired</ion-select-option>
+        </ion-select>
       </ion-item>
 
       <ion-item>
