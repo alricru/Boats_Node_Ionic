@@ -2,7 +2,17 @@
 
 # Diagramas
 
-# Requisitos de Usuario
+# Dependencies
+
+- ### BACKEND:
+
+  - **node dependencies**: *```npm install```*
+  - **multer**: *```npm install multer```*
+  - **sequelize**: *```npm install sequelize```
+
+- ### FRONTEND:
+  - **node dependencies**: *```npm install```*
+  - **sweetalert2**: *```npm install sweetalert2```*
 
 # Casos de Uso
 
@@ -12,11 +22,15 @@
 
 # Manuales
 
-# Pila tecnológia
+# Pile
 
-**BACKEND**: NodeJS
+- ## BACKEND: 
 
-**FRONTEND**: Ionic/Angular
+  - *```NodeJS```*
+
+- ## FRONTEND: 
+ 
+  - *```Ionic/Angular```*
 
 # Comparación de tecnologías
 
