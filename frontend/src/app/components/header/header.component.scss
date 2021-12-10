@@ -4,6 +4,9 @@ img {
     width: 30%;
 }
 
-ion-toolbar {
+ion-toolbar[color-theme="light"] {
     --background: linear-gradient(45deg, #e2e2e2, #ffffff);
+}
+ion-toolbar[color-theme="dark"] {
+    --background: linear-gradient(45deg, #242323, #0c0b0b);
 }
