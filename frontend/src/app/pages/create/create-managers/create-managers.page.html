@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>create-managers</ion-title>
+    <ion-title>Create Manager</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -36,12 +36,11 @@
         </ion-input>
       </ion-item>
 
-      <ion-row>
-        <ion-col>
-          <ion-button type="submit" color="primary" expand="block">Add</ion-button>
-          <ion-button color="danger" expand="block" (click)="cancel()">Cancel</ion-button>
-        </ion-col>
-      </ion-row>
+
     </form>
   </ion-list>
+  <div class="container">
+    <ion-button class="add" type="submit">Add</ion-button>
+  <ion-button class="cancel" (click)="cancel()">Cancel</ion-button>
+  </div>
 </ion-content>

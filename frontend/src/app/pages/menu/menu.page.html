@@ -10,6 +10,7 @@
       <ion-list>
         <ion-menu-toggle color="color" auto-hide="false" *ngFor="let p of pages">
           <ion-item [routerLink]="p.url" routerDirection="root" [class.active-item]="selectedPath === p.url">
+            <ion-icon [name]="p.icon" slot="start"></ion-icon>
             {{ p.title }}
           </ion-item>
         </ion-menu-toggle>
@@ -18,6 +19,9 @@
 
     <ion-footer>
       <ion-toolbar class="footer">
+        <ion-button class="user" *ngIf=user()>User</ion-button>
+        <ion-button class="user" *ngIf=admin()>Admin</ion-button>
+
         <ion-button class="logout" *ngIf=isLogged() (click)=logout()>
           Logout
         </ion-button>

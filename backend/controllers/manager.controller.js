@@ -18,7 +18,7 @@ exports.create = (req, res) => {
     surname: req.body.surname,
     repairedboats: req.body.repairedboats,
     description: req.body.description,
-    filename: req.file.filename
+    filename: (req.file.filename) || "predeterminada.png"
   };
 
   // Save Manager in the database

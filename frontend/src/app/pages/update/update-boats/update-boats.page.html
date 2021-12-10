@@ -36,7 +36,8 @@
       <ion-item>
         <ion-label position="floating">Manager</ion-label>
         <ion-select formControlName="managerId" type="text" required>
-          <ion-select-option *ngFor="let manager of Managers" value='{{manager.id}}'>{{manager.name}}</ion-select-option>
+          <ion-select-option *ngFor="let manager of Managers" value='{{manager.id}}'>{{manager.name}}
+          </ion-select-option>
         </ion-select>
       </ion-item>
 
@@ -46,12 +47,10 @@
         </ion-input>
       </ion-item>
 
-      <ion-row>
-        <ion-col>
-          <ion-button type="submit" color="primary" expand="block">Update</ion-button>
-          <ion-button color="danger" expand="block" (click)="cancel()">Cancel</ion-button>
-        </ion-col>
-      </ion-row>
     </form>
   </ion-list>
+  <div class="container">
+    <ion-button class="add" type="submit">Add</ion-button>
+    <ion-button class="cancel" (click)="cancel()">Cancel</ion-button>
+  </div>
 </ion-content>

@@ -45,14 +45,14 @@ export class CreateManagersPage implements OnInit {
       const manager:Managers = this.managerForm.value;
       this.ManagersService.createManager(manager,this.file).subscribe(()=>{
         this.managerForm.reset;
-        this.router.navigateByUrl("menu/list-boats");
+        this.router.navigateByUrl("menu/list-managers");
       });
     }
     console.log(this.managerForm.value)
   }
   cancel(){
     this.managerForm.reset;
-    this.router.navigateByUrl("menu/list-boats").then(()=>{window.location.reload();});
+    this.router.navigateByUrl("menu/list-managers").then(()=>{window.location.reload();});
   }
 
 }

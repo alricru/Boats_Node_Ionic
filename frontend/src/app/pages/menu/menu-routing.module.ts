@@ -56,6 +56,14 @@ const routes: Routes = [
         path: 'update-boats',
         loadChildren: () => import('../update/update-boats/update-boats.module').then( m => m.UpdateBoatsPageModule)
       },
+      {
+        path: 'info-managers',
+        loadChildren: () => import('../info-managers/info-managers.module').then( m => m.InfoManagersPageModule)
+      },
+      {
+        path: 'info-boats',
+        loadChildren: () => import('../info-boats/info-boats.module').then( m => m.InfoBoatsPageModule)
+      },
     
     ]
   },

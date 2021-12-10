@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { tap } from  'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { tap, catchError } from  'rxjs/operators';
 import { AuthResponse } from './auth-response';
 import { User } from './user';
 import { Storage } from '@ionic/storage';
@@ -44,6 +44,7 @@ export class AuthService {
 
     );
   }
+  
 
   login(user: User): Observable<AuthResponse> {
     return this.httpClient.post(`${this.AUTH_SERVER_ADDRESS}/api/users/signin`, null, this.getOptions(user)).pipe(
@@ -73,5 +74,19 @@ export class AuthService {
       return true;
     }
     return false;
+  }
+  getUsers(): Observable<AuthResponse[]>{
+    return this.httpClient.get<AuthResponse[]>(`${this.AUTH_SERVER_ADDRESS}/api/users/`)
+    .pipe(
+      tap(User => console.log('Users retrieved!')),
+      catchError(this.handleError<AuthResponse[]>('Get Users', []))
+    );
+  }
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      console.log(`${operation} failed: ${error.message}`);
+      return of(result as T);
+    };
   }
 }

@@ -23,22 +23,25 @@ export class MenuPage implements OnInit{
   ngOnInit() {
     if (localStorage.getItem('userToken')) {
       this.pages = [
-        {title: 'Info',url: '/menu/info'},
-        {title: 'Contact Us',url: '/menu/contact-us'},
-        {title: 'User', url: '/menu/login'},
+        {title: 'Info',url: '/menu/info', icon:'information-circle-outline'},
+        {title: 'Contact Us',url: '/menu/contact-us', icon: 'paper-plane-outline'},
+        {title: 'Managers', url: '/menu/info-managers', icon:'person-outline'},
+        {title: 'Boats', url: '/menu/info-boats', icon:'boat-outline'},
       ];
     } else if(localStorage.getItem('adminToken')) {
       this.pages = [
-        {title: 'Info', url: '/menu/info' },
-        {title: 'Contact Us', url: '/menu/contact-us'},
-        {title: 'Admin', url: '/menu/login'},
-        {title: 'Managers', url: '/menu/list-managers'},
-        {title: 'Boats', url: '/menu/list-boats'},
+        {title: 'Info', url: '/menu/info', icon:'information-circle-outline' },
+        {title: 'Contact Us', url: '/menu/contact-us', icon: 'paper-plane-outline'},
+        {title: 'Managers', url: '/menu/info-managers', icon:'person-outline'},
+        {title: 'Boats', url: '/menu/info-boats', icon:'boat-outline'},
+        {title: 'Admin Managers', url: '/menu/list-managers', icon:'person-add'},
+        {title: 'Admin Boats', url: '/menu/list-boats', icon:'boat'},
       ];
     }else{
       this.pages = [
-        {title: 'Info',url: '/menu/info'},
-        {title: 'Contact Us',url: '/menu/contact-us'},
+        {title: 'Info',url: '/menu/info', icon:'information-circle-outline'},
+        {title: 'Contact Us',url: '/menu/contact-us', icon: 'paper-plane-outline'},
+        {title: 'Managers', url: '/menu/info-managers', icon:'person-outline'},
       ];
     }
   }
@@ -55,6 +58,21 @@ export class MenuPage implements OnInit{
   }
   login(){
     this.router.navigate(['/menu/login']).then(() => { window.location.reload(); });
+  }
+  //PROVISIONAL
+  user(){
+    if(localStorage.getItem('userToken')){
+      return true;
+    }else{
+      return false;
+    }
+  }
+  admin(){
+    if(localStorage.getItem('adminToken')){
+      return true
+    }else{
+      return false
+    }
   }
 }
 
