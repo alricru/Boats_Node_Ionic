@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from "@angular/forms";
 import {Boats, BoatsService } from 'src/app/services/boats.service';
 import { ManagersService } from 'src/app/services/managers.service';
-import { AuthService } from 'src/app/auth/auth.service';
+import { UserService } from 'src/app/services/user.service';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-create-boats',
@@ -27,7 +28,8 @@ export class CreateBoatsPage implements OnInit {
     private zone: NgZone,
     private BoatsService: BoatsService,
     private ManagersService: ManagersService,
-    private AuthService: AuthService
+    private userService: UserService,
+    private storage: Storage
   ){}
 
   ngOnInit() {
@@ -44,9 +46,7 @@ export class CreateBoatsPage implements OnInit {
     this.ManagersService.getManagers().subscribe((response) =>{
       this.Managers = response;
     })
-    this.AuthService.getUsers().subscribe((response) =>{
-      this.Users = response;
-    })  
+    this.getUsers();
   }
   fileChange(fileChangeEvent){
     this.file = fileChangeEvent.target.files[0];
@@ -65,6 +65,12 @@ export class CreateBoatsPage implements OnInit {
       });
     }
     console.log(this.boatForm.value)
+  }
+  async getUsers() {
+    let token = await this.storage.get("token");
+    this.userService.getUsers(token).subscribe(response => {
+      this.Users = response;
+    })
   }
   cancel(){
     this.boatForm.reset;

@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Boats, BoatsService } from 'src/app/services/boats.service';
 import { ManagersService } from 'src/app/services/managers.service';
+import { UserService } from 'src/app/services/user.service';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-update-boats',
@@ -19,6 +21,8 @@ export class UpdateBoatsPage implements OnInit {
 
   Managers: any = []
 
+  Users: any = []
+
   private file : File;
 
   constructor(
@@ -27,7 +31,9 @@ export class UpdateBoatsPage implements OnInit {
     private zone: NgZone,
     private activatedRoute: ActivatedRoute,
     private BoatsService: BoatsService,
-    private ManagersService: ManagersService
+    private ManagersService: ManagersService,
+    private userService: UserService,
+    private storage: Storage
   ){this.id = this.activatedRoute.snapshot.paramMap.get('id');}
 
   ngOnInit() {
@@ -45,6 +51,7 @@ export class UpdateBoatsPage implements OnInit {
     this.ManagersService.getManagers().subscribe((response) =>{
       this.Managers = response;
     })
+    this.getUsers();
   }
   fetchUser(id){
     this.BoatsService.getBoat(id).subscribe((data) => {
@@ -74,6 +81,12 @@ onSubmit(){
     });
   }
   console.log(this.boatForm.value)
+}
+async getUsers() {
+  let token = await this.storage.get("token");
+  this.userService.getUsers(token).subscribe(response => {
+    this.Users = response;
+  })
 }
 cancel(){
   this.boatForm.reset;

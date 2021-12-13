@@ -29,8 +29,9 @@
 
       <ion-item>
         <ion-label position="floating">Usuario</ion-label>
-        <ion-input formControlName="userId" type="text" required>
-        </ion-input>
+        <ion-select formControlName="userId" type="text" required>
+          <ion-select-option *ngFor="let user of Users" value='{{user.id}}'>{{user.username}}</ion-select-option>
+        </ion-select>
       </ion-item>
 
       <ion-item>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
+import { BoatsService } from 'src/app/services/boats.service';
 
 @Component({
   selector: 'app-info-boats',

@@ -17,22 +17,22 @@ export class ListManagersPage implements OnInit {
 
   ngOnInit() {
   }
-  ionViewDidEnter(){
-    this.ManagersService.getManagers().subscribe((response) =>{
+  ionViewDidEnter() {
+    this.ManagersService.getManagers().subscribe((response) => {
       this.Managers = response;
     })
   }
-  
-  setSearchInput(event){
+
+  setSearchInput(event) {
     console.log(event.detail.value);
     this.search = event.detail.value;
   }
 
-  getSearchInput(){
+  getSearchInput() {
     return this.search;
   }
 
-  removeManager(manager, i){
+  removeManager(manager, i) {
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -44,9 +44,15 @@ export class ListManagersPage implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         this.ManagersService.deleteManagers(manager.id)
-        .subscribe(()=>{
-          this.ionViewDidEnter();
-        })
+          .subscribe(() => {
+            this.ionViewDidEnter();
+          }), err => {
+            Swal.fire({
+              title: "Can't remove de Manager",
+              text: "The manager have associated boats, if you want to",
+              icon: 'warning'
+            })
+          }
         Swal.fire(
           'Deleted!',
           'Your Manager has been deleted.',

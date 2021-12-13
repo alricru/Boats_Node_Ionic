@@ -28,15 +28,19 @@
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating">ID Usuario</ion-label>
-        <ion-input formControlName="userId" type="text" required>
-        </ion-input>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-select formControlName="userId" type="text" required>
+          <ion-select-option *ngFor="let user of Users" value='{{user.id}}'>
+            {{user.username}}
+          </ion-select-option>
+        </ion-select>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Manager</ion-label>
         <ion-select formControlName="managerId" type="text" required>
-          <ion-select-option *ngFor="let manager of Managers" value='{{manager.id}}'>{{manager.name}}
+          <ion-select-option *ngFor="let manager of Managers" value='{{manager.id}}'>
+            {{manager.name}}
           </ion-select-option>
         </ion-select>
       </ion-item>
