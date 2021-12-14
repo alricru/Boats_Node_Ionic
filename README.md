@@ -49,6 +49,7 @@
     <img width="300" src="https://user-images.githubusercontent.com/91074521/146058316-1e2666ce-1fb6-4486-b9c0-156780938a08.png">
   
   - When the user login, register or send a message, he will receive a confirmation message letting him know that he did it succesfully, and an error message when not, alongside this the CRUD that admins use to admininstrate all the information of the boats and managers have the same feature, with the addition of a cancel option when you try to delete something.
+  
     <img width="300" src="https://user-images.githubusercontent.com/91074521/146060785-fa31b317-e369-415c-9821-e1267ad94409.png">
     <img width="300" src="https://user-images.githubusercontent.com/91074521/146060839-27711134-eafb-42a7-a103-9caf34bbf14b.png">
     <img width="300" src="https://user-images.githubusercontent.com/91074521/146060940-0d6ffbc7-f317-49bc-8b51-e86cfc518563.png">
