@@ -31,7 +31,7 @@
 
 # Interfaces
 
-# Manuales
+# Manuals
 
 - ### Developer installation manual
 
