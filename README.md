@@ -118,10 +118,6 @@
  
   <img width="150" src="https://user-images.githubusercontent.com/91074521/146062209-68e82fb2-2bde-4abc-992e-3f05c0d1e5bc.png">
 
-# Tech Comparison
-
-# Planification
-
-# Conclusions
-
 # Links and References
+  - **Add a side menu on your Ionic app:** https://www.youtube.com/watch?v=I82_roQSgco&ab_channel=SimonGrimm 
+  - **Create easy sliders with Swiper:** https://www.youtube.com/watch?v=XcvieKvmI5A&t=99s&ab_channel=SimonGrimm
