@@ -32,12 +32,12 @@
 # Interfaces
 
 - ### Prototype
-   ![image](https://user-images.githubusercontent.com/91074521/146052370-18e9aeb2-cb8a-40ea-8543-5d21771889da.png) 
-   ![image](https://user-images.githubusercontent.com/91074521/146052578-ea00d645-de86-466a-9369-9dbf1446cf09.png)
-   ![image](https://user-images.githubusercontent.com/91074521/146052737-772c55bf-4cec-4a67-8237-5fc143e402b5.png)
-   ![image](https://user-images.githubusercontent.com/91074521/146052798-46acf6ab-4a69-49ca-a42f-08115549567a.png)
-   ![image](https://user-images.githubusercontent.com/91074521/146052873-27207177-63ca-4e39-8bcf-c8b98895597d.png)
-   ![image](https://user-images.githubusercontent.com/91074521/146052936-ed0ec729-1b3a-46be-8811-57b9e6d6a817.png)
+  <img width="300" src="https://user-images.githubusercontent.com/91074521/146052370-18e9aeb2-cb8a-40ea-8543-5d21771889da.png">
+  <img width="300" src="https://user-images.githubusercontent.com/91074521/146052578-ea00d645-de86-466a-9369-9dbf1446cf09.png">
+  <img width="300" src="https://user-images.githubusercontent.com/91074521/146052737-772c55bf-4cec-4a67-8237-5fc143e402b5.png">
+  <img width="300" src="https://user-images.githubusercontent.com/91074521/146052798-46acf6ab-4a69-49ca-a42f-08115549567a.png">
+  <img width="300" src="https://user-images.githubusercontent.com/91074521/146052873-27207177-63ca-4e39-8bcf-c8b98895597d.png">
+  <img width="300" src="https://user-images.githubusercontent.com/91074521/146052936-ed0ec729-1b3a-46be-8811-57b9e6d6a817.png">
 
 # Manuals
 
