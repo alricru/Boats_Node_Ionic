@@ -70,7 +70,7 @@
       <img width="400" src="https://user-images.githubusercontent.com/91074521/146064184-25202563-20c0-427f-92d4-8d7eee2334b2.png">
       
      - Then go to your console and install all the dependecies listed above, once you do that, use the command ```npm start``` to initiate the backend.
-
+  
   - ##### FRONTEND:
     - **Visual Studio Code or another editor:** https://code.visualstudio.com/
     - -------------DEPENDENCIES-------------- 
@@ -80,6 +80,10 @@
     - In the console install the dependencies listed above, like you did with the backend, then use the command ```ionic serve --lab``` to start the aplication.
     
     - if you get an error message from the ionic lab, install the dependency with the command: ```npm install ionic-lab```
+
+- ### User Manual
+  
+  - 
 
 # Pile
 
