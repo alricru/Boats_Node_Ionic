@@ -14,6 +14,16 @@
 
 ![image](https://user-images.githubusercontent.com/91074521/146031289-3fef568d-48fd-4b03-a40c-a52fc3b4af9d.png)
 
+# Requisitos de usuario
+
+- ### R.1 La aplicación que haremos será para móvil.
+- ### R.2 Los usuarios necesitan registro y clave para acceder a las páginas del menú, excepto por las páginas de información y contacto.
+- ### R.3 Los administradores de la app tendrán acceso a la modificación de los datos de la misma.
+  - R.3.1 Se podrá modificar los datos de los barcos y de los encargados, así como añadir nuevos o borrarlos.
+  - R.3.2 Para poder borrar un encargado o un barco, debe preguntar al usuario si está seguro.
+  - R.3.3 Para poder borrar un encargado deberá borrar o modificar los barcos asociados al mismo.
+ - ### R.4 Se podrán consultar todos los datos de todos los barcos y empleados en caso de los administradores, y en caso de los clientes solo los asociados a sus barcos.
+ -  
 
 # Dependencies
 
