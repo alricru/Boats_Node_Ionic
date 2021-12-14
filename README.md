@@ -84,8 +84,31 @@
 
 - ### User Manual
   
-  - 
+  - When you initiate the app you will see the info page, this page is just information about the company and a photo slider of the shipyard.
+  
+    <img width="300" src="https://user-images.githubusercontent.com/91074521/146090843-ee02dcb3-b740-43ac-814a-c2ad3afaf5d0.png">
+  
+  - You can open the main menu by swipping to the right or clicking on the 3 bars icon at the left topside.
+  
+    <img width="300" src="https://user-images.githubusercontent.com/91074521/146091165-05021d85-44af-4e1f-a2fc-721a4d524ebf.png">
+  
+  - In the Contact Us page, you can send a question or a request to the company, and in the managers one you will see a slider with information about our managers. 
+  
+    <img width="300" src="https://user-images.githubusercontent.com/91074521/146091860-63a6cafb-debe-4cfe-b437-797b10b28d89.png">
+    
+  - You can only access to the boats page if you are a client or and administrator, this page will display information about the reparation status of your boats.
+  
+  - As and administrator you can access to the admin boats and managers pages, that allows you to filter by name, modify, create or delete the information about them in a simple way.
 
+    <img width="300" src="https://user-images.githubusercontent.com/91074521/146092429-7639b444-1d83-4cc7-82f1-096b48ec5969.png">
+    
+  - You can delete the entry with the trash icon, modify it with the paper one or add a new entry with the green button.
+  
+  - If you try to modify or create an entry, you will enter on a new page, that allows you to edit or insert the information. 
+
+     <img width="300" src="https://user-images.githubusercontent.com/91074521/146092912-2bc12b1a-4f46-4564-a8ae-e2db64197525.png">
+    
+   
 # Pile
 
 - ## BACKEND: 
