@@ -23,7 +23,6 @@
   - R.3.2 Para poder borrar un encargado o un barco, debe preguntar al usuario si está seguro.
   - R.3.3 Para poder borrar un encargado deberá borrar o modificar los barcos asociados al mismo.
  - ### R.4 Se podrán consultar todos los datos de todos los barcos y empleados en caso de los administradores, y en caso de los clientes solo los asociados a sus barcos.
- - ### R.5 
 
 # Casos de Uso
 
