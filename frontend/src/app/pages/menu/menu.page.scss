@@ -2,7 +2,8 @@
     border-left: 8px solid var(--ion-color-secondary);
 }
 .header {
-    --background: linear-gradient(45deg, #e2e2e2, #ffffff);   
+    --background: linear-gradient(45deg, #e2e2e2, #ffffff); 
+    --color: grey;  
 }
 .footer {
     --background: linear-gradient(45deg, #e2e2e2, #ffffff);
@@ -10,6 +11,7 @@
 ion-item{
     --background: linear-gradient(45deg, #4158D0 0%, #50c4c8 100%);
     margin-bottom: -1%;
+    --color: black; 
 }
 ion-content{
     --background: linear-gradient(90deg, #4158D0 0%, #50c4c8 100%);
@@ -17,13 +19,16 @@ ion-content{
 .login{
     --background: linear-gradient(45deg, #4158D0 0%, #50c4c8 100%);
     margin-left: 8%;
+    --color: white; 
 }
 .logout{
     --background: linear-gradient(45deg, #d04141 0%, #c87250 100%);
     margin-right: 8%;
     float: right;
+    --color: white; 
 }
 .user{
     --background: linear-gradient(45deg, #4158D0 0%, #50c4c8 100%);
     margin-left: 8%;
+    --color: white;
 }
