@@ -65,7 +65,7 @@
     - **multer**: *```npm install multer```*
     - **sequelize**: *```npm install sequelize```
     
-    - You need to import the db_boats.sql to your Database manager, once you do that, you need to create a ```.env``` archive like this:
+    - You need to import the ```db_boats.sql``` to your Database manager, once you do that, you need to create a ```.env``` archive like this:
 
       <img width="400" src="https://user-images.githubusercontent.com/91074521/146064184-25202563-20c0-427f-92d4-8d7eee2334b2.png">
       
