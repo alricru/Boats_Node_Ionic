@@ -26,6 +26,9 @@
 
 # Casos de Uso
 
+![casos de uso](https://user-images.githubusercontent.com/91074521/146047269-fd6892b6-0b12-48c7-846d-08e46f1d804f.png)
+
+
 # Funcionamiento del sistema y especificaciones técnicas
 
 # Interfaces
