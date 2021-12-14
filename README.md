@@ -42,16 +42,16 @@
 - ### Usablity
   - Users didn't like the white background on the prototype because they usually check the app on the nigthttime and the brightness blind them, so i change the background color to a more appropiated color such a gradient blue, a better color to see in the nighttime, and also keep the essence of the company referencing the color of the ocean.
  
- <img width="300" src="https://user-images.githubusercontent.com/91074521/146056674-7e52d4b6-ba2a-4527-9cf4-387a484ed0b5.png">
+    <img width="300" src="https://user-images.githubusercontent.com/91074521/146056674-7e52d4b6-ba2a-4527-9cf4-387a484ed0b5.png">
   
   - I decided to use a sidemenu on the app instead of a typical menu bar on the top to not overload the interface, this way is more user friendly and visually organized.
   
-  <img width="300" src="https://user-images.githubusercontent.com/91074521/146058316-1e2666ce-1fb6-4486-b9c0-156780938a08.png">
+    <img width="300" src="https://user-images.githubusercontent.com/91074521/146058316-1e2666ce-1fb6-4486-b9c0-156780938a08.png">
   
   - When the user login, register or send a message, he will receive a confirmation message letting him know that he did it succesfully, and an error message when not, alongside this the CRUD that admins use to admininstrate all the information of the boats and managers have the same feature, with the addition of a cancel option when you try to delete something.
-  <img width="300" src="https://user-images.githubusercontent.com/91074521/146060785-fa31b317-e369-415c-9821-e1267ad94409.png">
-  <img width="300" src="https://user-images.githubusercontent.com/91074521/146060839-27711134-eafb-42a7-a103-9caf34bbf14b.png">
-  <img width="300" src="https://user-images.githubusercontent.com/91074521/146060940-0d6ffbc7-f317-49bc-8b51-e86cfc518563.png">
+    <img width="300" src="https://user-images.githubusercontent.com/91074521/146060785-fa31b317-e369-415c-9821-e1267ad94409.png">
+    <img width="300" src="https://user-images.githubusercontent.com/91074521/146060839-27711134-eafb-42a7-a103-9caf34bbf14b.png">
+    <img width="300" src="https://user-images.githubusercontent.com/91074521/146060940-0d6ffbc7-f317-49bc-8b51-e86cfc518563.png">
   
 # Manuals
 
