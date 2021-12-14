@@ -1,41 +1,39 @@
-# Introducción
+# Introduction
 
-- ### Aplicación Desarrollada para Astican
+- ### App developed for Astican
   
-  -  La funcionalidad de esta aplicación es llevar un seguimiento de los barcos que están en el astillero  así como el estado de su reparación, y a su vez, permitir a los clientes de astican acceder a la información de sus barcos que están siendo reparados sin tener que llamar al propio astillero, esto permite una mejor noción y organización de lo que se está llevando en el mismo.
+  - The functionality of this app is to get real time information about their managers, ships and their maintenance, also, let their clients know where are their ships, who is repairing it etc.., without needing to call or came to the shipyard.
+  In addition, this app provide an info page and a contact us form, for the users on the internet who want to know more about the company and how they work.
 
-# Diagramas
+# Diagrams
 
-- ### Modelo E/R
+- ### E/R Model
 
 ![modelo ER](https://user-images.githubusercontent.com/91074521/146035687-314e1592-9c1f-4655-8798-fb1df192a4c6.png)
 
-- ### Modelo Relacional
+- ### Relational Mode
 
 ![image](https://user-images.githubusercontent.com/91074521/146031289-3fef568d-48fd-4b03-a40c-a52fc3b4af9d.png)
 
-# Requisitos de usuario
+# User Requirements
 
-- ### R.1 La aplicación que haremos será para móvil.
-- ### R.2 Los usuarios necesitan registro y clave para acceder a las páginas del menú, excepto por las páginas de información y contacto.
-- ### R.3 Los administradores de la app tendrán acceso a la modificación de los datos de la misma.
-  - R.3.1 Se podrá modificar los datos de los barcos y de los encargados, así como añadir nuevos o borrarlos.
-  - R.3.2 Para poder borrar un encargado o un barco, debe preguntar al usuario si está seguro.
-  - R.3.3 Para poder borrar un encargado deberá borrar o modificar los barcos asociados al mismo.
- - ### R.4 Se podrán consultar todos los datos de todos los barcos y empleados en caso de los administradores, y en caso de los clientes solo los asociados a sus barcos.
+- ### R.1 The app will be done for mobile.
+- ### R.2 The users need to be registered to access most of the features the app provide, except for the info and contact us page.
+- ### R.3 Admins will have access to modify the app info.
+  - R.3.1 They can modify, delete and create both managers and boats info.
+  - R.3.2 To delete a manager or a boat, the app will ask if he really want to.
+  - R.3.3 To delete a manager they need to delete or modify all boats that references that manager before delete him.
+ - ### R.4 Admins Can consult all info from the boats and managers, and Clients only can consult the info that reference their user.
 
-# Casos de Uso
+# Use Cases
 
 ![casos de uso](https://user-images.githubusercontent.com/91074521/146047269-fd6892b6-0b12-48c7-846d-08e46f1d804f.png)
-
-
-# Funcionamiento del sistema y especificaciones técnicas
 
 # Interfaces
 
 # Manuales
 
-- ### Manual de instalación de desarrollador
+- ### Developer installation manual
 
   - ##### BACKEND:
 
@@ -57,10 +55,10 @@
  
   - *```Ionic/Angular```*
 
-# Comparación de tecnologías
+# Tech Comparison
 
-# Planificación
+# Planification
 
-# Conclusiones
+# Conclusions
 
-# Enlaces y referencias
+# Links and References
