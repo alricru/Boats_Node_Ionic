@@ -6,6 +6,15 @@
 
 # Diagramas
 
+- ### Modelo E/R
+
+![modelo ER](https://user-images.githubusercontent.com/91074521/146035687-314e1592-9c1f-4655-8798-fb1df192a4c6.png)
+
+- ### Modelo Relacional
+
+![image](https://user-images.githubusercontent.com/91074521/146031289-3fef568d-48fd-4b03-a40c-a52fc3b4af9d.png)
+
+
 # Dependencies
 
 - ### BACKEND:
