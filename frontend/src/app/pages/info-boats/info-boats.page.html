@@ -5,7 +5,7 @@
 
 <ion-content>
   <div *ngFor="let boat of Boats">
-    <ion-card *ngIf="boat.brand.toLowerCase().indexOf(getSearchInput()) != -1 || boat.model.toLowerCase().indexOf(getSearchInput()) != -1">
+    <ion-card *ngIf="boat.userId == userId && boat.brand.toLowerCase().indexOf(getSearchInput()) != -1">
       <ion-card-header>
         <ion-img src="http://localhost:4000/{{boat.filename}}"></ion-img>
       </ion-card-header>

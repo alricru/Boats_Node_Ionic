@@ -14,12 +14,16 @@ export class InfoBoatsPage implements OnInit {
 
   public search: string = "";
   Boats: any = []
+  userId: number;
 
   constructor(private storage: Storage,private BoatsService: BoatsService, private router: Router) { }
 
   ngOnInit() {
   }
   ionViewDidEnter(){
+
+    this.getUserId()
+
     this.BoatsService.getBoats().subscribe((response) =>{
       this.Boats = response;
     })
@@ -31,5 +35,10 @@ export class InfoBoatsPage implements OnInit {
 
   getSearchInput(){
     return this.search;
+  }
+
+  async getUserId(){
+    let token = await this.storage.get("userId");
+    this.userId = token;
   }
 }
