@@ -13,6 +13,9 @@ module.exports = app => {
 
     // Retrieve a single Boat with id
     router.get("/:id", boats.findOne);
+
+    // Retrieve all motors equals an id
+    router.get("/user/:id", boats.findAllByUserId);
   
     // Update a Boat with id
     router.put("/:id", upload.single('file'), boats.update);

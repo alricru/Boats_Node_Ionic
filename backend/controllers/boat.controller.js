@@ -49,6 +49,20 @@ exports.findAll = (req, res) => {
     });
 };
 
+exports.findAllByUserId = (req, res) => {
+  const id = req.params.id;
+
+  Boat.findAll({ where: { userId: id } })
+      .then(data => {
+          res.send(data);
+      })
+      .catch(err => {
+          res.status(500).send({
+              message: err.message || "Some error occurred while retrieving boats."
+          });
+      });
+};
+
 // Find a single Boat with an id
 exports.findOne = (req, res) => {
   const id = req.params.id;

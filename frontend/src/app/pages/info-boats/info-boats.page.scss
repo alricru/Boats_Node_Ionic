@@ -1,0 +1,47 @@
+
+ion-title{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+#container{
+    background: linear-gradient(225deg, #50c4c8, #4158d0);
+}
+ion-content{
+    --background: linear-gradient(100deg, #4158d0, #50c4c8);
+}
+ion-searchbar{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+ion-img{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+ion-card-title{
+    text-align: center;
+    font-size: x-large;
+    color: black;
+}
+ion-card-subtitle{
+    text-align: center;
+    font-size: smaller;
+    color: grey;
+}
+.container{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+ion-card{
+    --background: linear-gradient(45deg, #c2c2c2, #ffffff);
+    margin-bottom: 10%;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}

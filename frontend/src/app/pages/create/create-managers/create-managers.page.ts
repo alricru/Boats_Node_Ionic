@@ -1,4 +1,4 @@
-import { Component, NgZone, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from "@angular/forms";
 import { Managers, ManagersService } from 'src/app/services/managers.service';
@@ -20,7 +20,6 @@ export class CreateManagersPage implements OnInit {
   constructor(
     private router: Router,
     public formBuilder: FormBuilder,
-    private zone: NgZone,
     private ManagersService: ManagersService
   ){}
 
