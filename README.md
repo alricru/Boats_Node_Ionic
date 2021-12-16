@@ -11,7 +11,7 @@
 
 ![modelo ER](https://user-images.githubusercontent.com/91074521/146035687-314e1592-9c1f-4655-8798-fb1df192a4c6.png)
 
-- ### Relational Mode
+- ### Relational Model
 
 ![image](https://user-images.githubusercontent.com/91074521/146031289-3fef568d-48fd-4b03-a40c-a52fc3b4af9d.png)
 
@@ -70,6 +70,21 @@
 
       <img width="400" src="https://user-images.githubusercontent.com/91074521/146064184-25202563-20c0-427f-92d4-8d7eee2334b2.png">
       
+      - JWT_SECRET=V3RY#1MP0RT@NT$3CR3T#
+
+         MYSQL_DATABASE=db_boats
+         
+         MYSQL_USER=root
+         
+         MYSQL_PASSWORD=Your Database Manager Password
+         
+         MYSQL_ROOT_PASSWORD=Your Database Manager Password
+
+         DB_HOST=localhost
+
+         NODE_ENV=development
+         
+         
      - Then go to your console and install all the dependecies listed above, once you do that, use the command ```npm start``` to initiate the backend.
   
   - ##### FRONTEND:
