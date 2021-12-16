@@ -19,8 +19,7 @@
 
     <ion-footer>
       <ion-toolbar class="footer">
-        <ion-button class="user" *ngIf=user()>User</ion-button>
-        <ion-button class="user" *ngIf=admin()>Admin</ion-button>
+        <ion-button class="user" *ngIf="username">{{username}}</ion-button>
 
         <ion-button class="logout" *ngIf=isLogged() (click)=logout()>
           Logout
