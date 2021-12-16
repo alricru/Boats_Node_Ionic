@@ -5,12 +5,21 @@
 
 <ion-content>
   <div *ngFor="let boat of Boats">
-    <ion-card *ngIf="boat.userId == userId && boat.brand.toLowerCase().indexOf(getSearchInput()) != -1">
+    <ion-card *ngIf="boat.userId == userId && boat.brand.toLowerCase().indexOf(getSearchInput()) != -1 || isAdmin() && boat.brand.toLowerCase().indexOf(getSearchInput()) != -1">
       <ion-card-header>
         <ion-img src="http://localhost:4000/{{boat.filename}}"></ion-img>
       </ion-card-header>
       <ion-card-title>Marca: {{boat.brand}}</ion-card-title>
-      <ion-card-subtitle>Modelo: {{boat.model}}</ion-card-subtitle>
+      <ion-card-subtitle class="model">Modelo: {{boat.model}}</ion-card-subtitle>
+      <div *ngFor="let manager of Managers">
+        <ion-card-subtitle class="manager" *ngIf="manager.id == boat.managerId">Manager: {{manager.name}}</ion-card-subtitle>
+      </div>
+      <ion-card-subtitle>
+        <ion-progress-bar *ngIf="boat.status == 'Checking'" value="0.1"></ion-progress-bar>
+        <ion-progress-bar *ngIf="boat.status == 'Repairing'" value="0.5"></ion-progress-bar>
+        <ion-progress-bar *ngIf="boat.status == 'Repaired'" value="1"></ion-progress-bar>
+      </ion-card-subtitle>
+      <ion-card-subtitle class="sub">{{boat.status}}</ion-card-subtitle>
     </ion-card>
   </div>
 </ion-content>

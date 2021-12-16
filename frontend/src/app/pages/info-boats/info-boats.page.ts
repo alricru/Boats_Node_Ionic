@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { BoatsService } from 'src/app/services/boats.service';
 import { UserService } from 'src/app/services/user.service';
 import { Storage } from '@ionic/storage';
+import { ManagersService } from 'src/app/services/managers.service';
 
 @Component({
   selector: 'app-info-boats',
@@ -15,8 +16,9 @@ export class InfoBoatsPage implements OnInit {
   public search: string = "";
   Boats: any = []
   userId: number;
+  Managers: any = []
 
-  constructor(private storage: Storage,private BoatsService: BoatsService, private router: Router) { }
+  constructor(private storage: Storage,private BoatsService: BoatsService, private router: Router, private ManagersService: ManagersService) { }
 
   ngOnInit() {
   }
@@ -26,6 +28,9 @@ export class InfoBoatsPage implements OnInit {
 
     this.BoatsService.getBoats().subscribe((response) =>{
       this.Boats = response;
+    })
+    this.ManagersService.getManagers().subscribe((response) =>{
+      this.Managers = response;
     })
   }
   setSearchInput(event){
@@ -40,5 +45,12 @@ export class InfoBoatsPage implements OnInit {
   async getUserId(){
     let token = await this.storage.get("userId");
     this.userId = token;
+  }
+  isAdmin(){
+    if(localStorage.getItem("adminToken")){
+      return true;
+    }else{
+      return false;
+    }
   }
 }
