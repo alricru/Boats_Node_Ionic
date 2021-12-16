@@ -3,7 +3,12 @@
 <ion-content>
     <swiper #swiper [config]="config">
         <ng-template swiperSlide *ngFor="let manager of Managers">
-            <ion-img src="http://localhost:4000/{{manager.filename}}"></ion-img>
+            <ion-card>
+                <ion-img src="http://localhost:4000/{{manager.filename}}"></ion-img>
+                <ion-card-title>{{manager.name}} {{manager.surname}}</ion-card-title>
+                <ion-card-content>{{manager.description}}</ion-card-content>
+                <ion-card-content>Barcos Reparados: {{manager.repairedboats}}</ion-card-content>
+            </ion-card>
         </ng-template>
       </swiper>
 </ion-content>

@@ -26,12 +26,19 @@ ion-img{
 ion-card-title{
     text-align: center;
     font-size: x-large;
-    color: black;
+    color: rgb(133, 7, 7);
 }
-ion-card-subtitle{
+.sub{
+    color:rgb(113, 168, 30);
     text-align: center;
     font-size: smaller;
-    color: grey;
+    margin-top:3%;
+}
+.model{
+    margin-top:5%;
+    text-align: center;
+    font-size: smaller;
+    color: rgb(0, 0, 0);
 }
 .container{
     width: 50%;
@@ -44,4 +51,18 @@ ion-card{
     width: 85%;
     margin-left: auto;
     margin-right: auto;
+}
+ion-progress-bar{
+    --progress-background:rgb(113, 168, 30);
+    --background: rgb(242, 255, 223);
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:5%;
+}
+.manager{
+    margin-top:5%;
+    text-align: center;
+    font-size: smaller;
+    color: grey;
 }
