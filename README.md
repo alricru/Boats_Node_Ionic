@@ -117,6 +117,9 @@
 - ## FRONTEND: 
  
   <img width="150" src="https://user-images.githubusercontent.com/91074521/146062209-68e82fb2-2bde-4abc-992e-3f05c0d1e5bc.png">
+  
+# Postman
+- https://documenter.getpostman.com/view/17816075/UVRAH6kr
 
 # Links and References
   - **Add a side menu on your Ionic app:** https://www.youtube.com/watch?v=I82_roQSgco&ab_channel=SimonGrimm 
